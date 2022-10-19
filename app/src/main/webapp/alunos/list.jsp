@@ -20,12 +20,17 @@
                 <th>ID</th>
                 <th>NOME</th>
                 <th>IDADE</th>
+                <th>&nbsp;</th>
             </tr>
             <c:forEach var="a" items="${alunos}">
                 <tr>
                     <td>${a.id}</td>
                     <td>${a.nome}</td>
                     <td>${a.idade}</td>
+                    <td>
+                        <a href="/alunos/update/${a.id}">Editar</a> | 
+                        <a href="/alunos/delete/${a.id}">Remover</a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>

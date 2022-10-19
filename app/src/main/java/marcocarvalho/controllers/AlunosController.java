@@ -55,5 +55,18 @@ public class AlunosController {
             aluno.get().setIdade(idade);
             alunosRepo.save(aluno.get());
             return "redirect:/alunos/list";
-        }
+    }
+    
+    @RequestMapping("delete/{id}")
+    public String delete(Model model, @PathVariable int id) {
+        Optional<Aluno> aluno = alunosRepo.findById(id);
+        model.addAttribute("aluno", aluno.get());
+        return "/alunos/delete";
+    }
+
+    @RequestMapping(value = "delete", method = RequestMethod.POST)
+    public String saveDelete(@RequestParam("id") int id) {
+        alunosRepo.deleteById(id);
+        return "redirect:/alunos/list";
+    }
 }
