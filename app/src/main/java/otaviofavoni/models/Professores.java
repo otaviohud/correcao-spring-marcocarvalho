@@ -7,13 +7,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 @Entity
-@Table(name = "alunos")
-public class Aluno {
+@Table(name = "professores")
+public class Professores {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nome;
-    private int idade;
+    private int componente;
 
     public void setId(int id) {
         this.id = id;
@@ -31,16 +31,11 @@ public class Aluno {
         return nome;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setComponentes(int componente) {
+        this.componente = componente;
     }
 
-    public int getIdade() {
-        return idade;
+    public int getCompomentes() {
+        return componentes;
     }
- 
- public void setCurso(String nome) {
-    return this.curso;
- }
-
 }

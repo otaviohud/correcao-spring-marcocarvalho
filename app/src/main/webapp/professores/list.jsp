@@ -13,25 +13,23 @@
 
 <body>
     <main class="container">
-        <h1>Alunos</h1>
-        <a class="btn btn-primary" href="/alunos/insert">Adicionar Aluno</a>
+        <h1>Professores</h1>
+        <a class="btn btn-primary" href="/professores/insert">Adicionar Professor</a>
         <table class="table">
             <tr>
                 <th>ID</th>
                 <th>NOME</th>
-                <th>IDADE</th>
-                <th>CURSO</th>
+                <th>COMPONENTE</th>
                 <th>&nbsp;</th>
             </tr>
-            <c:forEach var="a" items="${alunos}">
+            <c:forEach var="a" items="${professores}">
                 <tr>
                     <td>${a.id}</td>
                     <td>${a.nome}</td>
-                    <td>${a.idade}</td>
-                    <td>${a.curso}</td>
+                    <td>${a.componentes}</td>
                     <td>
-                        <a href="/alunos/update/${a.id}">Editar</a> | 
-                        <a href="/alunos/delete/${a.id}">Remover</a>
+                        <a href="/professores/update/${a.id}">Editar</a> | 
+                        <a href="/professores/delete/${a.id}">Remover</a>
                     </td>
                 </tr>
             </c:forEach>

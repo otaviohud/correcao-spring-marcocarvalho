@@ -12,14 +12,14 @@
 
 <body>
     <main class="container">
-        <h1>Remover Aluno</h1>
+        <h1>Remover Professor</h1>
         <p>
-            Tem certeza que deseja excluir o aluno ${aluno.nome} ?
+            Tem certeza que deseja excluir o Professor ${professores.nome} ?
         </p>
         <form action="/alunos/delete" method="post">
-            <input type="hidden" value="${aluno.id}" name="id" />
+            <input type="hidden" value="${professores.id}" name="id" />
             <br />
-            <a class="btn btn-primary" href="/alunos/list">Voltar</a>
+            <a class="btn btn-primary" href="/professores/list">Voltar</a>
             <button class="btn btn-danger" type="submit">Excluir</button>
         </form>
     </main>
