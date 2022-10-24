@@ -1,4 +1,4 @@
-package marcocarvalho.controllers;
+package otaviofavoni.controllers;
 
 import java.util.Optional;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import marcocarvalho.models.Aluno;
-import marcocarvalho.repositories.AlunosRepository;
+import otaviofavoni.models.Aluno;
+import otaviofavoni.repositories.AlunosRepository;
 
 @Controller
 @RequestMapping("/alunos")

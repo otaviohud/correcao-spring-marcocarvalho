@@ -1,4 +1,4 @@
-package marcocarvalho.models;
+package otaviofravoni.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -38,4 +38,9 @@ public class Aluno {
     public int getIdade() {
         return idade;
     }
+ 
+ public void setCurso(String nome) {
+    return this.curso;
+ }
+
 }
